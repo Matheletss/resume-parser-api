@@ -24,6 +24,8 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 3. Install dependencies:
 ```bash
 pip install -r requirements.txt
+pip install -y tesseract-ocr poppler-utils
+python -m spacy download en_core_web_sm
 ```
 
 ## Running the API
@@ -35,12 +37,17 @@ source venv/bin/activate  # Activate virtual environment
 
 2. Start the API:
 ```bash
-python main.py
+# In resume-parser-api directory
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
-
+# In hirena-web directory
+```
+npm install
+npm run dev
+```
 ## Usage
 
-- The API will typically run on `http://localhost:5000`
+- The API will typically run on `http://localhost:8000`
 - Use endpoints to parse resumes and extract information
 
 ## Dependencies
