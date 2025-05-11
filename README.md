@@ -4,7 +4,7 @@
 This is a Python-based API for parsing and extracting information from resumes.
 
 ## Prerequisites
-- Python 3.8+
+- Python 3.10+
 - pip (Python package manager)
 
 ## Installation
