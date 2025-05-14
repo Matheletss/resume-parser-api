@@ -24,7 +24,8 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 3. Install dependencies:
 ```bash
 pip install -r requirements.txt
-pip install -y tesseract-ocr poppler-utils
+sudo apt update
+sudo apt install -y tesseract-ocr poppler-utils(For Windows download the .exe and add to local path)
 python -m spacy download en_core_web_sm
 ```
 
